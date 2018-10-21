@@ -11,9 +11,10 @@ public class Playermove : MonoBehaviour {
     [SerializeField] private float walkSpeed, runSpeed;
     [SerializeField] private float runBuildUpSpeed;
     [SerializeField] private KeyCode runKey;
+    [SerializeField] private KeyCode walkKey;
 
     private float movementSpeed;
-   // public Animator rifle;
+    public Animator marcus;
 
     private CharacterController charController;
 
@@ -25,8 +26,9 @@ public class Playermove : MonoBehaviour {
 
     private void Update()
     {
-        
-        if(Time.time >= 6)
+     
+
+        if (Time.time >= 6)
         {
             PlayerMovement();
         }
@@ -45,23 +47,31 @@ public class Playermove : MonoBehaviour {
         Vector3 rightMovement = transform.right * horizInput;
 
         charController.SimpleMove(Vector3.ClampMagnitude(forwardMovement + rightMovement, 1.0f) * movementSpeed);
-
+      
         SetMovementSpeed();
     }
 
     private void SetMovementSpeed()
     {
+        marcus.SetBool("idle", true);
+        marcus.SetBool("walk", false);
+        marcus.SetBool("run", false);
         if (Input.GetKey(runKey))
         {
-            //rifle.SetBool("run", true);
+            marcus.SetBool("run", true);
+            marcus.SetBool("walk", false);
+            marcus.SetBool("idle", false);
             movementSpeed = Mathf.Lerp(movementSpeed, runSpeed, Time.deltaTime * runBuildUpSpeed);
         }
-        else
+        else if(Input.GetKey(walkKey))
         {
-            //rifle.SetBool("run", false);
-            //rifle.SetBool("walk", true);
+
+            marcus.SetBool("walk", true);
+            marcus.SetBool("run", false);
+            marcus.SetBool("idle", false);
             movementSpeed = Mathf.Lerp(movementSpeed, walkSpeed, Time.deltaTime * runBuildUpSpeed);
         }
+       
     }
 
 

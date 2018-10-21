@@ -11,6 +11,7 @@ TagManager:
   - static_obj
   - Energy
   - Enemy_Attack
+  - Deathspace
   layers:
   - Default
   - TransparentFX

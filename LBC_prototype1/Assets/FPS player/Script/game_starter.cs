@@ -27,14 +27,44 @@ public class game_starter : MonoBehaviour
     public Text counttext;
     private int Counter = 5;
     bool timestarts = false;
+    public GameObject Objectivespanel;
+
+    public GameObject[] UIlist = new GameObject[6];
+
+    
 
     void Start()
     {
+        
+
+        DoFreeze();
+        Cursor.lockState = CursorLockMode.None;
+
+        for (int i = 0; i < UIlist.Length; i++)
+        {
+            UIlist[i].SetActive(false);
+        }
+        //Just making sure that the timeScale is right             
+    }
+
+    public void startgame(bool start)
+    {
+        Time.timeScale = 1;
+        Objectivespanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
         Countdown.SetActive(true);
         StartCoroutine("LoseTime");
-        Time.timeScale = 1; //Just making sure that the timeScale is right             
-      
+        for (int i = 0; i < UIlist.Length; i++)
+        {
+            UIlist[i].SetActive(true);
+        }
+        Debug.Log("PAUSE");
+    }
 
+    public void DoFreeze()
+    {
+        var original = Time.timeScale;
+        Time.timeScale = 0f;
     }
 
     public float timeLeft = 30.0f;
@@ -62,7 +92,7 @@ public class game_starter : MonoBehaviour
             enemy5.startspawn(true);
             enemy6.startspawn(true);
 
-          
+
             countdown.SetActive(true);
       
         }

@@ -3,7 +3,7 @@
 public class target : MonoBehaviour {
 
     public int health = 50;
- 
+    public GameObject objective;
 
     public void takedamage(int amount)
     {
@@ -16,6 +16,8 @@ public class target : MonoBehaviour {
 
     public void die()
     {
+        objective_marker ob = objective.GetComponent<objective_marker>();
+        ob.addkill(1);
         Destroy(gameObject);
     }
 }

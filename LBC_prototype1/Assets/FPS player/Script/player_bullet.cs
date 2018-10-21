@@ -12,6 +12,7 @@ public class player_bullet : MonoBehaviour
     void Update()
     {
         transform.Translate(0,0,speed * Time.deltaTime);
+       
     }
 
 

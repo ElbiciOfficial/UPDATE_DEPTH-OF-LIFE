@@ -41,6 +41,10 @@ public class player_info : MonoBehaviour {
         //}
 
         Health.CurrentValue = player_health;
+        if(player_health == 0)
+        {
+
+        }
     }
 
     public void Hurt(int damage)
