@@ -94,12 +94,12 @@ Rigidbody:
   m_GameObject: {fileID: 1419247116420948}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: Infinity
+  m_AngularDrag: Infinity
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!65 &65142678319521990
 BoxCollider:
@@ -126,5 +126,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 3
-  paintballprefab: {fileID: 1004054227794122, guid: 0c0f1ad29f9d84643ac8420cf5de9af1,
-    type: 2}
+  rotationSpeed: 0

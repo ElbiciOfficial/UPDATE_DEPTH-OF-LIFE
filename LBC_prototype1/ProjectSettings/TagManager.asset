@@ -12,6 +12,7 @@ TagManager:
   - Energy
   - Enemy_Attack
   - Deathspace
+  - Player_Attack
   layers:
   - Default
   - TransparentFX

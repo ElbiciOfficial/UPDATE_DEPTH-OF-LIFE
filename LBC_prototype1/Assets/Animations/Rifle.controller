@@ -20,18 +20,6 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: walk
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: run
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
   - m_Name: hold
     m_Type: 4
     m_DefaultFloat: 0
@@ -395,7 +383,7 @@ AnimatorStateMachine:
     m_Position: {x: 576, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102695720662046886}
-    m_Position: {x: 611, y: 125, z: 0}
+    m_Position: {x: 564, y: 156, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102448714740208264}
     m_Position: {x: 300, y: 228, z: 0}
