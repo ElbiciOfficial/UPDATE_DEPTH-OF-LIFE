@@ -31,10 +31,9 @@ public class Playermove : MonoBehaviour {
     {
      
 
-        if (Time.time >= 6)
-        {
+       
             PlayerMovement();
-        }
+       
       
         
     }

@@ -127,7 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16a71da2b7bf6643ad5ad4955d62b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  Floatingtextprefab: {fileID: 1734382654118962, guid: 9312a62cca83c7f4fbba823e2dc498ac,
+    type: 2}
+  health: 32
   objective: {fileID: 0}
 --- !u!114 &114654114741029638
 MonoBehaviour:

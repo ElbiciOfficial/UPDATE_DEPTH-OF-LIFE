@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class target : MonoBehaviour {
 
+    public GameObject Floatingtextprefab;
     public int health = 50;
     public GameObject objective;
     objective_marker objc;
+
 
      void Start()
     {
@@ -18,6 +21,14 @@ public class target : MonoBehaviour {
         {
             die();
         }
+        ShowFloatingText();
+    }
+
+    void ShowFloatingText()
+    {
+        GameObject go = Instantiate(Floatingtextprefab, transform.position, Quaternion.identity);
+        go.GetComponent<TextMesh>().transform.rotation = Camera.main.transform.rotation;
+        go.GetComponent<TextMesh>().text = health.ToString();
     }
 
     public void die()

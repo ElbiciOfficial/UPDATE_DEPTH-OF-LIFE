@@ -10,20 +10,15 @@ public class Interactor : MonoBehaviour {
     public float ray_Range;
     public GameObject interact;
     public KeyCode key;
-
-    public GameObject rifle1;
-
     public GameObject inventorypanel;
-
+    public Text text;
     int inum1;
-   
-    public Image Slot1; 
-    public Sprite sprite2;
- 
+
     public string itemname;
 
 	void inter()
     {
+        
         interact.SetActive(true);
     }
 
@@ -38,16 +33,27 @@ public class Interactor : MonoBehaviour {
 
             if (ray_Hit.collider.tag != "Enemy" && ray_Hit.collider.tag != "static_obj" && ray_Hit.collider.tag != "Enemy_Attack" && ray_Hit.collider.tag != "Player_Attack" && ray_Hit.collider.tag != "Player")
             {
-                //Debug.Log("hello Energy");
-                inter();
+                //Debug.Log("hello Energy");        
                 if(ray_Hit.collider != null)
                 {
+                    text.text = "E - " + ray_Hit.collider.tag;
+                    inter();
+
                     if (Input.GetKeyDown(key))
                     {
-                        Inventory item = inventorypanel.GetComponent<Inventory>();
-                        itemname = ray_Hit.collider.tag;
-                        item.Additem(itemname);
-                        Destroy(ray_Hit.collider.gameObject);
+                        if (ray_Hit.collider.tag == "Door")
+                        {
+                          
+                                             
+                        }
+                        else
+                        {
+                            Inventory item = inventorypanel.GetComponent<Inventory>();
+                            itemname = ray_Hit.collider.tag;
+                            item.Additem(itemname);
+                            Destroy(ray_Hit.collider.gameObject);
+                        }
+                      
                     }
                 }
                 

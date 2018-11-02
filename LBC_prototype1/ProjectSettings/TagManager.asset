@@ -13,6 +13,7 @@ TagManager:
   - Enemy_Attack
   - Deathspace
   - Player_Attack
+  - Door
   layers:
   - Default
   - TransparentFX

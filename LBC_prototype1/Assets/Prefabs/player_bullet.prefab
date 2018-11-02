@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   impacteffect: {fileID: 100002, guid: 00fedc70b62a31e448e8ccc298257b56, type: 2}
-  damage: 10
+  damage: 8
 --- !u!135 &135394693275427240
 SphereCollider:
   m_ObjectHideFlags: 1
